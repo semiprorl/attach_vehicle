@@ -1,5 +1,9 @@
 attach_vehicle by semiprorl
 
+[CONFIG]
+
+THIS MOD IS ONLY FOR FIVEM
+
 
 [DESCRIPTION]
 
