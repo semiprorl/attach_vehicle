@@ -19,4 +19,4 @@ That's all
 
 [COMMANDS]
 
-Press "E" for attach/detach the vehicle when u are in the benson truck 
+Press "E" for attach/detach the vehicle when u are in the benson trunk 
