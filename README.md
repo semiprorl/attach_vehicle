@@ -19,7 +19,4 @@ That's all
 
 [COMMANDS]
 
-/attach --- for attach the vehicle
-/detach -- for detach the vehicle
-
-
+Press "E" for attach/detach the vehicle when u are in the benson truck 
