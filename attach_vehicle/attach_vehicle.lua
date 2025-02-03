@@ -5,8 +5,8 @@ local attachedVehicle = nil
 
 function AttachVehicleToBenson(benson, vehicle)
     if DoesEntityExist(benson) and DoesEntityExist(vehicle) then
-        local boneIndex = GetEntityBoneIndexByName(benson, "chassis") -- Récupère l'index du bone du Benson
-        local offset = vector3(0.0, -1.5, 0.5) -- Ajustez ces valeurs pour positionner correctement le véhicule
+        local boneIndex = GetEntityBoneIndexByName(benson, "chassis") 
+        local offset = vector3(0.0, -1.5, 0.5) 
         AttachEntityToEntity(vehicle, benson, boneIndex, offset.x, offset.y, offset.z, 0.0, 0.0, 0.0, true, true, false, true, 20, true)
 
        
@@ -15,10 +15,10 @@ function AttachVehicleToBenson(benson, vehicle)
 
         isAttached = true
         attachedVehicle = vehicle 
-        Notify("Véhicule attaché au Benson.")
-        print("DEBUG: Véhicule attaché avec succès.")
+        Notify("Véhicle Attached.")
+        print("DEBUG: Véhicle Attached.")
     else
-        print("DEBUG: Echec de l'attachement. Véhicule ou Benson introuvable.")
+        print("DEBUG: Fail. Benson unfinded.")
     end
 end
 
@@ -65,8 +65,8 @@ Citizen.CreateThread(function()
                 if IsPedInAnyVehicle(playerPed, false) then
                     local vehicle = GetVehiclePedIsIn(playerPed, false)
 
-                    DisplayHelpText("Appuyez sur ~INPUT_CONTEXT~ pour attacher le véhicule.")
-                    print("DEBUG: Option d'attachement disponible.")
+                    DisplayHelpText("Press ~INPUT_CONTEXT~ to attach the véhicle.")
+                    print("DEBUG: Can attach to benson.")
 
                     
                     if IsControlJustPressed(1, 51) then -- 51 = "E"
@@ -74,7 +74,7 @@ Citizen.CreateThread(function()
                         print("DEBUG: Tentative d'attachement.")
                     end
                 else
-                    print("DEBUG: Le joueur n'est pas dans un véhicule.")
+                    print("DEBUG: Player isn't in a vehicle.")
                 end
             else
                 isNearBenson = false
